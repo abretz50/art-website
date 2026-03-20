@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arturo Tapia-Minchez | Music Catalog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/global.css" />
+</head>
+<body data-depth="0">
+  <div class="mobile-topbar" data-mobile-topbar></div>
+  <div class="site-shell">
+    <div data-site-nav></div>
+    <main>
+      <section class="page page--forest">
+        <div class="page-inner">
+          <span class="kicker">Music Catalog</span>
+          <h1>Music Catalog</h1>
+          <p class="lead">Browse by category, explore scores and recordings, and feature purchase links where available. Each work can include title, year, instrumentation, duration, text information, description, perusal score, recording, and text.</p>
+          <div class="catalog-toolbar">
+            <a class="pill" href="#choral">Choral</a>
+            <a class="pill" href="#instrumental">Instrumental</a>
+            <a class="pill" href="#large-ensemble">Large Ensemble</a>
+            <a class="pill" href="#chamber-ensemble">Chamber Ensemble</a>
+            <a class="pill" href="#works-list">Full Works List</a>
+          </div>
+
+          <div class="work-entry" id="choral">
+            <div class="work-header">
+              <div>
+                <span class="kicker">Featured Choral Work</span>
+                <h3>Disquieted Prayers</h3>
+                <p class="muted" style="margin-top:6px;">A Psalm in the Wake of Inhumanity (2025)</p>
+              </div>
+              <a class="button" href="#">Purchase / Soon Available</a>
+            </div>
+            <div class="meta-grid">
+              <div class="meta"><strong>Ensemble</strong>Soprano Soloist, SATB Chorus, and Piano</div>
+              <div class="meta"><strong>Duration</strong>16 Minutes</div>
+              <div class="meta"><strong>Text</strong>Hebrew of Psalm 146, English text by Arturo Tapia-Minchez</div>
+              <div class="meta"><strong>Category</strong>Choral</div>
+            </div>
+            <p>Use this space for a short introduction to the piece, discussing theme, context, musical language, and text relationship. This layout is designed to scale easily for many works in the catalog.</p>
+            <div class="media-grid">
+              <div class="media-box">
+                <h4>Recording / Demo</h4>
+                <p class="muted">Embed a YouTube, Vimeo, or audio player here.</p>
+              </div>
+              <div class="media-box">
+                <h4>Perusal Score</h4>
+                <p class="muted">Add a watermarked score excerpt PDF viewer or link here.</p>
+              </div>
+            </div>
+          </div>
+
+          <details class="group" id="instrumental" open>
+            <summary>Instrumental <span>+</span></summary>
+            <div class="details-content">
+              <div class="grid-2">
+                <div class="card" id="large-ensemble">
+                  <h4>Large Ensemble</h4>
+                  <p class="muted">A future category for orchestral, wind, or other large ensemble works.</p>
+                </div>
+                <div class="card" id="chamber-ensemble">
+                  <h4>Chamber Ensemble</h4>
+                  <p class="muted">A future category for small ensemble music and chamber collaborations.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="group" id="works-list">
+            <summary>Full Works List <span>+</span></summary>
+            <div class="details-content">
+              <div class="grid-2">
+                <div class="card">
+                  <h4>Published Works</h4>
+                  <p class="muted">Add links to publishers and order pages.</p>
+                </div>
+                <div class="card">
+                  <h4>Unpublished Works</h4>
+                  <p class="muted">List available manuscripts, perusal materials, and inquiry options.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+      <footer class="footer" data-site-footer></footer>
+    </main>
+  </div>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

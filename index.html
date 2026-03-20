@@ -1,108 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arturo Tapia-Minchez</title>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Spectral', serif;
-      background: #3b0a1a; /* deep burgundy */
-      color: #f5e6d3;
-    }
-
-    .sidebar {
-      position: fixed;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 200px;
-      background: #2a0713;
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-      gap: 15px;
-    }
-
-    .sidebar a {
-      color: #f5e6d3;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .sidebar a:hover {
-      color: gold;
-    }
-
-    .main {
-      margin-left: 220px;
-      padding: 40px;
-    }
-
-    .name-tag {
-      font-size: 36px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      font-size: 18px;
-      margin-bottom: 40px;
-    }
-
-    .hero {
-      height: 300px;
-      background: rgba(255,255,255,0.05);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-
-    .socials {
-      margin-top: 20px;
-    }
-
-    .socials a {
-      margin-right: 15px;
-      color: #f5e6d3;
-      text-decoration: none;
-    }
-
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arturo Tapia-Minchez | Opening Pre-Show</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/global.css" />
 </head>
-<body>
-
-  <div class="sidebar">
-    <a href="#">HOME</a>
-    <a href="#">BIOGRAPHY</a>
-    <a href="#">MUSIC CATALOG</a>
-    <a href="#">VOCAL DEMOS</a>
-    <a href="#">POETRY</a>
-    <a href="#">PRESS KIT & EVENTS</a>
-    <a href="#">CONTACT</a>
+<body data-depth="0">
+  <div class="mobile-topbar" data-mobile-topbar></div>
+  <div class="site-shell">
+    <div data-site-nav></div>
+    <main>
+      <section class="intro-screen">
+        <div class="intro-card">
+          <span class="eyebrow">Opening Pre-Show</span>
+          <div class="intro-grid">
+            <div>
+              <h1 class="display-title">Arturo<br>Tapia-Minchez</h1>
+              <p class="display-subtitle">Composer • Vocalist • Poet</p>
+              <p class="intro-copy">
+                Welcome. This opening space is designed as an invitation into Arturo’s artistic world—warm, personal, meditative, and expressive. It can later hold a welcome video, an excerpt from <em>Disquieted Prayers</em>, and imagery of composing, singing, and writing.
+              </p>
+              <div class="intro-actions">
+                <a class="button primary-btn" href="home.html">Enter Website</a>
+                <button type="button" id="welcomeButton">Play Welcome Chime</button>
+              </div>
+            </div>
+            <div class="image-triptych">
+              <div class="image-card"><span>Composing</span></div>
+              <div class="image-card"><span>Singing</span></div>
+              <div class="image-card"><span>Writing</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer" data-site-footer></footer>
+    </main>
   </div>
-
-  <div class="main">
-
-    <div class="name-tag">ARTURO TAPIA-MINCHEZ</div>
-    <div class="subtitle">Composer ● Vocalist ● Poet</div>
-
-    <div class="hero">
-      <!-- Slideshow / images will go here -->
-      <p>Image Slideshow Placeholder</p>
-    </div>
-
-    <p>Welcome to my website. This space is a reflection of my work as a composer, vocalist, and poet.</p>
-
-    <div class="socials">
-      <a href="#">YouTube</a>
-      <a href="#">Instagram</a>
-    </div>
-
-  </div>
-
+  <script src="assets/js/site.js"></script>
 </body>
 </html>
