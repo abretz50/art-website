@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   await mount("#site-sidebar", `${depth}/components/sidebar.html`);
   await mount("#site-footer", `${depth}/components/footer.html`);
 
+  document.querySelectorAll("[data-nav-href]").forEach(el => {
+    const target = el.dataset.navHref;
+    el.setAttribute("href", `${depth}/${target}`);
+  });
+
   const current = document.body.dataset.page || "";
   document.querySelectorAll("[data-page-target]").forEach(el => {
     if (el.dataset.pageTarget === current) {

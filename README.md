@@ -24,3 +24,7 @@ This version is redesigned to feel more aligned with the PDF brief:
 Edit the sidebar once and it updates everywhere.
 Edit the footer once and it updates everywhere.
 Swap placeholder media with real files later.
+
+
+## Fix applied
+Shared navbar links now resolve correctly from both the homepage and nested subpages.
