@@ -1,17 +1,18 @@
 
-<aside class="sidebar">
+<aside class="sidebar ornate">
   <a class="brand" href="index.html">
-    <h1>Arturo Tapia-Minchez</h1>
+    <h1>Arturo<br>Tapia-Minchez</h1>
     <p>Composer ● Vocalist ● Poet</p>
+    <span class="hebrew">קוֹל • תְּפִלָּה • שִׁיר</span>
   </a>
 
-  <div class="nav-section-label">Main Pages</div>
+  <div class="nav-title">Main Pages</div>
   <ul class="nav-list">
     <li class="nav-item"><a class="nav-link" data-page-target="home" href="index.html">Home</a></li>
     <li class="nav-item"><a class="nav-link" data-page-target="biography" href="pages/biography/index.html">Biography</a></li>
 
     <li class="nav-item has-dropdown">
-      <button class="dropdown-toggle" type="button"><span>Music Catalog</span><span>▾</span></button>
+      <button class="dropdown-toggle" type="button"><span>Music Catalog</span><span class="caret">▾</span></button>
       <ul class="subnav">
         <li><a data-page-target="music-overview" href="pages/music-catalog/index.html">Overview</a></li>
         <li><a data-page-target="choral" href="pages/music-catalog/choral.html">Choral</a></li>
@@ -21,7 +22,7 @@
     </li>
 
     <li class="nav-item has-dropdown">
-      <button class="dropdown-toggle" type="button"><span>Vocal Demos</span><span>▾</span></button>
+      <button class="dropdown-toggle" type="button"><span>Vocal Demos</span><span class="caret">▾</span></button>
       <ul class="subnav">
         <li><a data-page-target="vocal-demos" href="pages/vocal-demos/index.html">Demo Gallery</a></li>
         <li><a data-page-target="artist-cv" href="pages/vocal-demos/artist-cv.html">Artist CV</a></li>
@@ -29,7 +30,7 @@
     </li>
 
     <li class="nav-item has-dropdown">
-      <button class="dropdown-toggle" type="button"><span>Poetry</span><span>▾</span></button>
+      <button class="dropdown-toggle" type="button"><span>Poetry</span><span class="caret">▾</span></button>
       <ul class="subnav">
         <li><a data-page-target="poetry-intro" href="pages/poetry/index.html">Intro to My Poetry</a></li>
         <li><a data-page-target="poetry-demos" href="pages/poetry/demos.html">Poetry Demos</a></li>
@@ -41,8 +42,8 @@
     <li class="nav-item"><a class="nav-link" data-page-target="contact" href="pages/contact/index.html">Contact</a></li>
   </ul>
 
-  <div class="sidebar-footer">
-    <strong style="color:var(--gold); display:block; margin-bottom:8px;">File Layout</strong>
-    Main pages are grouped in <code>/pages</code>. Shared pieces live in <code>/components</code>, styling in <code>/styles</code>, behavior in <code>/scripts</code>, and media placeholders in <code>/assets</code>.
+  <div class="sidebar-note">
+    Shared navigation and footer load into every page from one place. Media is organized in <code>assets/audio</code>, <code>assets/video</code>, and <code>assets/photos</code>.
   </div>
+  <div class="inner-border"></div>
 </aside>

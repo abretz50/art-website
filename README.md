@@ -1,31 +1,26 @@
 
-# Arturo Tapia-Minchez Website Starter
+# Arturo Tapia-Minchez Website Starter V2
 
-This package is organized to make editing easy.
+This version is redesigned to feel more aligned with the PDF brief:
+- minimal overall layout
+- intricate floral-style border treatment around featured elements
+- modern monastery-inspired palette
+- Spectral-based typography for the title feel requested in the PDF
+- styled scrollbars
+- shared floating left navigation and shared footer
 
-## Folder structure
-- `index.html` → home page
-- `pages/` → all main page groups and subpages
-- `components/` → shared sidebar and footer loaded into every page
-- `styles/site.css` → sitewide styling
-- `scripts/includes.js` → loads shared navbar/footer and handles dropdowns
-- `assets/audio` → placeholder audio files
-- `assets/video` → placeholder video files
-- `assets/photos` → placeholder image files
-
-## How shared pieces work
-Every page includes:
-- `#site-sidebar`
-- `#site-footer`
-- `scripts/includes.js`
-
-That script loads the shared floating sidebar and footer automatically.
+## File structure
+- `index.html` → Home
+- `pages/` → Main pages and grouped subpages
+- `components/sidebar.html` → shared left navbar
+- `components/footer.html` → shared footer
+- `styles/site.css` → global styles
+- `scripts/includes.js` → loads shared components and dropdowns
+- `assets/audio` → music / ambient placeholders
+- `assets/video` → welcome / reel placeholders
+- `assets/photos` → images and gallery placeholders
 
 ## Easy editing
-- Change navigation once in `components/sidebar.html`
-- Change the footer once in `components/footer.html`
-- Update colors/fonts/layout in `styles/site.css`
-- Replace placeholders in the `assets` folders with real media later
-
-## Notes
-This starter uses filler content for now and is based on a composer-style site structure with elegant page sections, dropdown navigation, and a left-side floating interface.
+Edit the sidebar once and it updates everywhere.
+Edit the footer once and it updates everywhere.
+Swap placeholder media with real files later.

@@ -5,41 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Music Catalog | Arturo Tapia-Minchez</title>
   <link rel="stylesheet" href="../../styles/site.css" />
-  <style>:root{--page-bg:#563445;}</style>
+  <style>:root{--page-bg:linear-gradient(160deg, #201617 0%, #50323d 42%, #263331 100%);}</style>
 </head>
-<body data-page="music-overview" data-depth="../.." class="music-page">
+<body data-depth="../.." data-page="music-overview">
   <div class="layout">
-    <div id="site-sidebar"></div>
+    <div id="site-sidebar" class="sidebar-shell"></div>
     <main class="content">
       <div class="content-inner">
         <section class="hero">
-          <p class="eyebrow">Composer Website Starter</p>
-          <h2>Music catalog overview.</h2>
-          <p class="lede">This section is organized like a composer archive, with dropdown navigation for choral, instrumental, and a full works list. Each work card is designed for title, instrumentation, text info, audio, score, and purchase links.</p>
+          <p class="eyebrow">Composer Website</p>
+          <h1 class="hero-title">Music
+Catalog</h1>
+          <p class="hero-subtitle">Works, scores, recordings, and texts</p>
+          <p class="lede">Built to support elegant piece listings with room for instrumentation, text details, score excerpts, recordings, and purchase links.</p>
           <div class="button-row">
-            <a class="button" href="../../pages/music-catalog/index.html">Browse Music</a>
-            <a class="button secondary" href="../../pages/contact/index.html">Get in Touch</a>
+            <a class="button" href="../../pages/music-catalog/index.html">Browse the Music</a>
+            <a class="button secondary" href="../../pages/contact/index.html">Contact</a>
           </div>
         </section>
-
-<section class="grid">
-  <div class="catalog-card span-6">
-    <h3 class="section-title">Featured Work</h3>
-    <p><strong>Disquieted Prayers</strong> — A Psalm in the Wake of Inhumanity (2025)</p>
-    <div class="catalog-meta">
-      <div><strong>Ensemble:</strong><br>Soprano Solo, SATB Chorus, Piano</div>
-      <div><strong>Duration:</strong><br>16 minutes</div>
-      <div><strong>Text:</strong><br>Psalm 146 + original poetry</div>
-    </div>
-    <p class="muted">Short introduction placeholder. This area can describe themes, premiere context, and emotional arc.</p>
-    <div class="button-row">
-      <a class="button" href="choral.html">View Choral Works</a>
-      <a class="button secondary" href="full-works-list.html">See All Works</a>
-    </div>
-  </div>
-  <div class="panel span-6">
-    <h3 class="section-title">Catalog Structure</h3>
-    <p class="muted">Each piece page or card can include recording links, score excerpts, text, and purchase / inquiry options. This keeps the catalog polished but still easy to expand.</p>
+        
+<section class="section">
+  <div class="grid">
+    <article class="card ornate span-8">
+      <div class="inner-border"></div>
+      <div class="section-head">
+        <p class="kicker">Music Catalog</p>
+        <h2 class="section-title">Featured work presentation</h2>
+      </div>
+      <div class="work-card">
+        <h3 class="work-title">Disquieted Prayers</h3>
+        <p class="muted"><em>A Psalm in the Wake of Inhumanity</em> (2025)</p>
+        <div class="meta">
+          <div><strong>Ensemble</strong><br>Soprano Soloist, SATB Chorus, Piano</div>
+          <div><strong>Duration</strong><br>16 Minutes</div>
+          <div><strong>Text</strong><br>Hebrew of Psalm 146 and English text by Arturo Tapia-Minchez</div>
+        </div>
+        <div class="hr"></div>
+        <p class="muted">This layout is designed to support title, year, instrumentation, duration, text, description, score excerpts, recording links, and purchase availability in a polished but uncluttered way.</p>
+      </div>
+    </article>
+    <article class="card ornate span-4">
+      <div class="inner-border"></div>
+      <div class="section-head">
+        <p class="kicker">Catalog Paths</p>
+        <h2 class="section-title">Browse by type</h2>
+      </div>
+      <div class="list">
+        <div class="list-item">Choral works</div>
+        <div class="list-item">Instrumental works</div>
+        <div class="list-item">Full works list</div>
+      </div>
+    </article>
   </div>
 </section>
 

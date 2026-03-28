@@ -1,37 +1,33 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const attach = async (selector, file) => {
-    const target = document.querySelector(selector);
-    if (!target) return;
+  const depth = document.body.dataset.depth || ".";
+  const mount = async (selector, file) => {
+    const el = document.querySelector(selector);
+    if (!el) return;
     const res = await fetch(file);
-    target.innerHTML = await res.text();
+    el.innerHTML = await res.text();
   };
 
-  const depth = document.body.dataset.depth || ".";
-  await attach("#site-sidebar", `${depth}/components/sidebar.html`);
-  await attach("#site-footer", `${depth}/components/footer.html`);
+  await mount("#site-sidebar", `${depth}/components/sidebar.html`);
+  await mount("#site-footer", `${depth}/components/footer.html`);
 
   const current = document.body.dataset.page || "";
   document.querySelectorAll("[data-page-target]").forEach(el => {
     if (el.dataset.pageTarget === current) {
       el.classList.add("active");
-      const parentItem = el.closest(".nav-item");
-      if (parentItem && parentItem.classList.contains("has-dropdown")) {
-        parentItem.classList.add("open");
-      }
-      const outer = el.closest(".subnav");
-      if (outer) {
-        const toggle = outer.previousElementSibling;
-        if (toggle) toggle.classList.add("active");
-        const item = outer.closest(".nav-item");
+      const subnav = el.closest(".subnav");
+      if (subnav) {
+        const item = subnav.closest(".nav-item");
         if (item) item.classList.add("open");
+        const toggle = subnav.previousElementSibling;
+        if (toggle) toggle.classList.add("active");
       }
     }
   });
 
-  document.querySelectorAll(".dropdown-toggle").forEach(btn => {
-    btn.addEventListener("click", () => {
-      btn.parentElement.classList.toggle("open");
+  document.querySelectorAll(".dropdown-toggle").forEach(button => {
+    button.addEventListener("click", () => {
+      button.parentElement.classList.toggle("open");
     });
   });
 });
