@@ -36,3 +36,11 @@ This version shifts the visual palette toward warm tan and sand tones with brown
 
 ## Refinement pass
 This version reduces oversized hero scaling, increases text contrast for accessibility, adds darker trim and subtle decorative edge details, and upgrades homepage placeholders so the mockup feels more believable.
+
+
+## Clean URLs update
+Routes now use folder-based paths like `/catalog/choral/` instead of `pages/music-catalog/choral.html`. The sidebar note was also removed.
+
+
+## Content update
+This version adds the supplied biography, artist statement, links, social profiles, book link, and spotlight details into the homepage and relevant sections.

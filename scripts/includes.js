@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   document.querySelectorAll("[data-nav-href]").forEach(el => {
     const target = el.dataset.navHref;
-    el.setAttribute("href", `${depth}/${target}`);
+    el.setAttribute("href", depth === "." ? target : `${depth}/${target}`);
   });
 
   const current = document.body.dataset.page || "";
