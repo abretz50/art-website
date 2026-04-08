@@ -44,3 +44,7 @@ Routes now use folder-based paths like `/catalog/choral/` instead of `pages/musi
 
 ## Content update
 This version adds the supplied biography, artist statement, links, social profiles, book link, and spotlight details into the homepage and relevant sections.
+
+
+## Calmer refinement
+This version adds the framed nameplate, removes white-on-tan text issues, simplifies ornamentation, and reduces visual noise for a more relaxed, editorial feel.
