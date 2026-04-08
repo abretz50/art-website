@@ -32,3 +32,7 @@ Shared navbar links now resolve correctly from both the homepage and nested subp
 
 ## Theme update
 This version shifts the visual palette toward warm tan and sand tones with brown accents, plus blue-and-white Mediterranean notes inspired by sunlit stone streets and whitewashed architecture.
+
+
+## Refinement pass
+This version reduces oversized hero scaling, increases text contrast for accessibility, adds darker trim and subtle decorative edge details, and upgrades homepage placeholders so the mockup feels more believable.

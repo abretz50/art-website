@@ -2,32 +2,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Spectral:wght@400;500;600;700&display=swap");
 
 :root{
-  --ink:#4c3628;
-  --muted:#7a6251;
-  --gold:#b78b52;
-  --gold-soft:rgba(183,139,82,.18);
+  --ink:#3a291e;
+  --text:#4a3527;
+  --muted:#6d5747;
+  --gold:#a9783f;
+  --gold-soft:rgba(169,120,63,.18);
   --tan:#e8d8bf;
   --sand:#d9c2a0;
-  --stone:#f3eadb;
-  --brown:#76553d;
-  --brown-deep:#4f382a;
+  --stone:#f4ede1;
+  --brown:#6c4a34;
+  --brown-deep:#2c1d15;
+  --ink-black:#171311;
   --moss:#6e8c8b;
   --aegean:#6f95b4;
   --whitewash:#fcf8f1;
   --paper:#fffaf1;
-  --border:rgba(118,85,61,.28);
-  --line:rgba(76,54,40,.10);
-  --shadow:0 24px 60px rgba(91,67,45,.18);
-  --sidebar-width:280px;
-  --content-width:1180px;
-  --page-bg:linear-gradient(160deg, #f7efe3 0%, #ead8bc 45%, #d6bea0 100%);
+  --border:rgba(108,74,52,.28);
+  --line:rgba(58,41,30,.10);
+  --shadow:0 24px 60px rgba(91,67,45,.16);
+  --sidebar-width:248px;
+  --content-width:1040px;
+  --page-bg:linear-gradient(160deg, #f8f0e3 0%, #ead9bf 45%, #d9c3a1 100%);
 }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  color:var(--ink);
+  color:var(--text);
   font-family:"Inter", system-ui, sans-serif;
   background:var(--page-bg);
   min-height:100vh;
@@ -130,7 +132,7 @@ body::after{
 }
 .brand h1{
   font-family:"Spectral", Georgia, serif;
-  font-size:1.62rem;
+  font-size:1.48rem;
   line-height:1.08;
   margin:0 0 8px;
   letter-spacing:.06em;
@@ -215,7 +217,7 @@ body::after{
 .content{
   margin-left:calc(var(--sidebar-width) + 54px);
   width:calc(100% - var(--sidebar-width) - 54px);
-  padding:34px 28px 80px;
+  padding:28px 26px 72px;
 }
 .content-inner{
   max-width:var(--content-width);
@@ -223,11 +225,11 @@ body::after{
 }
 
 .hero{
-  min-height:72vh;
+  min-height:64vh;
   display:grid;
   align-content:end;
   gap:18px;
-  padding:36px 6px 30px;
+  padding:18px 6px 24px;
 }
 .eyebrow{
   margin:0;
@@ -239,10 +241,10 @@ body::after{
 .hero-title{
   margin:0;
   font-family:"Spectral", Georgia, serif;
-  font-size:clamp(3rem, 7vw, 6.25rem);
+  font-size:clamp(3.1rem, 6.1vw, 5.6rem);
   line-height:.95;
   font-weight:600;
-  max-width:10.5ch;
+  max-width:9.8ch;
   letter-spacing:.04em;
   text-transform:uppercase;
 }
@@ -255,9 +257,9 @@ body::after{
   text-transform:uppercase;
 }
 .lede{
-  max-width:760px;
+  max-width:720px;
   color:var(--muted);
-  font-size:1.08rem;
+  font-size:1.04rem;
   line-height:1.85;
 }
 .button-row{display:flex;flex-wrap:wrap;gap:12px}
@@ -293,7 +295,7 @@ body::after{
 .section-title{
   margin:0;
   font-family:"Spectral", Georgia, serif;
-  font-size:2rem;
+  font-size:1.76rem;
   font-weight:500;
 }
 .muted{color:var(--muted); line-height:1.8}
@@ -308,7 +310,7 @@ body::after{
   position:relative;
   border:1px solid rgba(255,255,255,.07);
   border-radius:28px;
-  padding:28px;
+  padding:24px;
   background:linear-gradient(180deg, rgba(255,255,255,.72), rgba(248,241,229,.74));
   box-shadow:var(--shadow);
   overflow:hidden;
@@ -361,7 +363,7 @@ body::after{
   gap:16px;
 }
 .photo-frame{
-  min-height:240px;
+  min-height:220px;
   border-radius:24px;
   background:
     linear-gradient(160deg, rgba(183,139,82,.18), rgba(111,149,180,.15)),
@@ -401,7 +403,7 @@ body::after{
 .work-title{
   margin:0;
   font-family:"Spectral", Georgia, serif;
-  font-size:1.6rem;
+  font-size:1.42rem;
 }
 .meta{
   display:grid;
@@ -463,4 +465,122 @@ textarea{min-height:170px; resize:vertical}
   .span-8,.span-7,.span-6,.span-5,.span-4,.span-12{grid-column:span 12}
   .frame-grid,.stat-row,.contact-form{grid-template-columns:1fr}
   .hero{min-height:auto; padding-top:14px}
+}
+
+
+.hero-title{
+  color:var(--brown-deep);
+  text-shadow:0 1px 0 rgba(255,255,255,.25);
+}
+.hero-subtitle,
+.eyebrow,
+.kicker{
+  color:var(--gold);
+}
+.lede,
+.muted,
+p,
+label,
+input,
+textarea,
+select{
+  color:var(--text);
+}
+.brand h1{ color:rgba(44,29,21,.14); }
+.brand p{ color:var(--gold); }
+.brand .hebrew{ color:rgba(58,41,30,.28); }
+
+.sidebar{
+  box-shadow:0 18px 42px rgba(70,47,28,.16);
+}
+.sidebar::before,
+.sidebar::after,
+.ornate::before,
+.ornate::after{
+  width:50px;
+  height:50px;
+}
+.sidebar::before,
+.ornate::before{
+  border-left:1px solid rgba(108,74,52,.55);
+  border-top:1px solid rgba(108,74,52,.55);
+}
+.sidebar::after,
+.ornate::after{
+  border-right:1px solid rgba(108,74,52,.55);
+  border-bottom:1px solid rgba(108,74,52,.55);
+}
+.ornate .inner-border{
+  border:1px solid rgba(169,120,63,.22);
+}
+.card.ornate::before{
+  content:"✦";
+  position:absolute;
+  top:14px;
+  right:18px;
+  color:rgba(108,74,52,.35);
+  font-size:1rem;
+}
+.section-title,
+.work-title{
+  color:var(--brown-deep);
+}
+.nav-link,.dropdown-toggle,.subnav a{
+  color:var(--text);
+}
+.nav-link:hover,.dropdown-toggle:hover,.nav-link.active,.dropdown-toggle.active{
+  border-color:rgba(108,74,52,.38);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.28);
+}
+.button{
+  color:var(--brown-deep);
+  border:1px solid rgba(108,74,52,.38);
+}
+.button:hover{
+  color:var(--paper);
+  background:linear-gradient(180deg, rgba(108,74,52,.92), rgba(169,120,63,.78));
+}
+.button.secondary{
+  color:var(--brown-deep);
+  border-color:rgba(108,74,52,.22);
+}
+.button.secondary:hover{
+  color:var(--paper);
+  background:linear-gradient(180deg, rgba(111,149,180,.95), rgba(108,74,52,.78));
+}
+.list-item,.stat,.footer,.card,.nav-link,.dropdown-toggle{
+  backdrop-filter: blur(3px);
+}
+.photo-frame::after{
+  content:"";
+  position:absolute;
+  inset:18px;
+  border-radius:16px;
+  border:1px dashed rgba(108,74,52,.18);
+}
+.identity-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:16px;
+}
+.identity-block{
+  padding:16px 16px 14px;
+  border-radius:18px;
+  background:rgba(255,255,255,.42);
+  border:1px solid rgba(108,74,52,.12);
+}
+.identity-block h3{
+  margin:0 0 8px;
+  font-family:"Spectral", Georgia, serif;
+  font-size:1.2rem;
+  color:var(--brown-deep);
+}
+.identity-block p{
+  margin:0;
+  color:var(--text);
+  line-height:1.65;
+}
+@media (max-width: 980px){
+  .identity-grid{grid-template-columns:1fr;}
 }
