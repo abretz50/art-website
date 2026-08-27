@@ -33,7 +33,10 @@ site — see `assets/photos/`:
       (Art actively writing in a leather journal outdoors), replacing the old
       `candid-outdoors-1.jpg` stand-in. A second journal shot, `poetry-journal-thoughtful.jpg`,
       was also added as the hero image on the Poetry intro page (which had no photo before).
-- [ ] Cover art for *My Little Book of Spells, Prayers, and Thoughts* — still needed.
+- [x] Cover art for *My Little Book of Spells, Prayers, and Thoughts* — sourced
+      directly from the Amazon listing already linked on the site and saved as
+      `book-cover-little-book.jpg`. Now used on the homepage's "Poetry Book" card
+      and as the lead image on the Little Book page.
 - [ ] Score excerpt images (or PDFs) for finished works, starting with *Disquieted Prayers*.
       **Note:** the 8/11/26 batch includes close-up manuscript photos (`manuscript-score-1.jpg`,
       `manuscript-score-rose-1.jpg`, `manuscript-score-rose-2.jpg`) but the visible title is
@@ -53,19 +56,22 @@ an obvious content gap:
   backdrop) and `headshot-studio-plain-1.jpg` / `-plain-2.jpg` (plain gray wall). All are
   higher-resolution than the current `headshot.jpg`. Worth asking Art if he wants to swap
   the primary homepage headshot for one of these.
-- **Piano / composing** — `piano-bw-1.jpg`, `piano-bw-closeup.jpg`, `piano-bw-lowangle.jpg`,
-  `piano-motion-blur-bw.jpg`, `piano-dramatic-lowangle.jpg`, `piano-composing-candid-1.jpg`,
-  `piano-candid-laughing-1.jpg`, `-2.jpg`, `piano-practice-candid-1.jpg`,
-  `piano-practice-portrait-1.jpg` through `-3.jpg`. Only `piano-composing-color.jpg` was
-  used (homepage); the rest are alternates if a different mood/page wants a piano photo
-  (e.g. a future Biography or Press Kit photo).
+- **Piano / composing** — `piano-composing-color.jpg` (homepage), `piano-dramatic-lowangle.jpg`
+  (Instrumental Catalog), `piano-practice-portrait-1.jpg` (Artist CV), and
+  `piano-practice-portrait-2.jpg` + `piano-candid-laughing-1.jpg` (Vocal Demos gallery)
+  are now in use. Still unused: `piano-bw-1.jpg`, `piano-bw-closeup.jpg`,
+  `piano-bw-lowangle.jpg`, `piano-motion-blur-bw.jpg`, `piano-composing-candid-1.jpg`,
+  `piano-candid-laughing-2.jpg`, `piano-practice-candid-1.jpg`, `piano-practice-portrait-3.jpg`
+  — alternates if a different mood/page wants another piano photo.
 - **Window-seat / contemplative series** — `window-seat-side-1.jpg`, `-full-1.jpg`,
-  `-writing-1.jpg`, `-contemplative-1.jpg`, `-writing-2.jpg`. Unused so far.
-- **Outdoor reading/writing series** — `reading-bench-1.jpg`, `-2.jpg`,
-  `reading-park-bench-1.jpg`, `-2.jpg`, `reading-stone-wall.jpg`,
-  `reading-binder-outdoors-1.jpg` through `-3.jpg`, `journal-writing-rock-1.jpg` through
-  `-3.jpg`, `candid-portrait-water.jpg`. Two were used (see above); the rest are strong
-  candidates for the Biography page or a future Poetry Demos page once that content exists.
+  `-writing-1.jpg`, `-contemplative-1.jpg`, `-writing-2.jpg`. Still unused.
+- **Outdoor reading/writing series** — now used: `reading-park-bench-1.jpg` / `-2.jpg`,
+  `reading-binder-outdoors-2.jpg` (Poetry Demos gallery), `journal-writing-rock-2.jpg`
+  and `reading-stone-wall.jpg` (Little Book page), plus the two used earlier
+  (`poet-journal-writing.jpg`, `poetry-journal-thoughtful.jpg`). Still unused:
+  `reading-bench-1.jpg` / `-2.jpg`, `reading-binder-outdoors-1.jpg` / `-3.jpg`,
+  `journal-writing-rock-1.jpg` / `-3.jpg`, `candid-portrait-water.jpg` — candidates for
+  the Biography page or wherever else needs filling out later.
 
 Unused spares still sitting in `assets/photos/` in case they're useful later:
 `headshot-alt.jpg`, `headshot-casual.jpg`, `candid-outdoors-1.jpg`, `candid-outdoors-2.jpg`,
@@ -130,17 +136,33 @@ site with no YouTube dependency:
       performance).
 - [x] `catalog/choral/index.html` — "Cuando El Rey Nimrod" card now plays
       `assets/video/cuando-el-rey-nimrod-kcvitas-2026.mp4` (6.3MB, KCVitas Premiere 2026).
+- [x] `catalog/choral/index.html` — "What Remains" card now plays
+      `assets/video/what-remains-cai-performance.mov` (98.7MB, CAI performance
+      recording). This one's right at the edge of what's reasonable to self-host —
+      see note below.
 
-Still pending YouTube upload — these are too large to reasonably commit to git
-(all under GitHub's 100MB hard limit except "Losing My Mind" and "Mi Chamocha", but
-still large enough to bloat the repo). Exact source locations, for whoever has
+**Why not self-host all of them on GitHub?** (asked directly — answering here so
+it doesn't get re-litigated): GitHub hard-blocks any single pushed file over
+100MB without Git LFS. "Losing My Mind" (382MB), "Mi Chamocha" (234MB), and
+"Birkat Shalom Youtube Video" (116.6MB) all exceed that outright — they cannot be
+pushed as plain git blobs, full stop. "What Remains" (98.7MB, embedded above) is
+just under the hard limit but well past GitHub's *recommended* 50MB — the 70.7MB
+choral vocal demo already triggered a size warning on push — and this site has no
+CDN behind it, so a ~100MB video served directly means a slow load for visitors.
+Git LFS was considered as the "make it all self-hosted" option, but it comes with
+its own storage/bandwidth quota (1GB/month free, then a paid data pack) once these
+file sizes are in play — real ongoing cost/maintenance for no benefit over YouTube,
+which is free, made for exactly this, and already the established plan. Net: self-
+host stayed reserved for anything that comfortably clears the 100MB hard limit;
+everything else is still headed to YouTube.
+
+Still pending YouTube upload — exact source locations, for whoever has
 `@Peace_of_Art2024` channel access:
 - [ ] **Vocal Demos page** — "Losing My Mind" (382MB) and "Mi Chamocha" (234MB), both
       in `Arts Website 2.0-20260827T220443Z-1-004\...\Vocal Demos\`.
-- [ ] **Choral Catalog page** — "What Remains" for SAATBB Choir, CAI performance
-      (98.7MB) and "Birkat Shalom Youtube Video.mp4" (116.6MB, a second recording of
-      the piece already partly represented by the KCVitas clip above) — both in
-      `Arts Website 2.0-20260827T220443Z-1-001\...\Score Demos (Videos, Midi,
+- [ ] **Choral Catalog page** — "Birkat Shalom Youtube Video.mp4" (116.6MB, a second
+      recording of the piece already partly represented by the KCVitas clip above),
+      in `Arts Website 2.0-20260827T220443Z-1-001\...\Score Demos (Videos, Midi,
       Recordings)\Live Recordings\`.
 - [ ] Once uploaded, swap the relevant `<video>` tag for a YouTube `<iframe>` embed
       (the `.video-slot` container CSS already supports either).

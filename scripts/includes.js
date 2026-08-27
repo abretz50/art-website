@@ -35,4 +35,23 @@ document.addEventListener("DOMContentLoaded", async () => {
       button.parentElement.classList.toggle("open");
     });
   });
+
+  const navToggle = document.getElementById("nav-toggle");
+  const sidebarEl = document.querySelector(".sidebar");
+  if (navToggle && sidebarEl) {
+    const closeNav = () => {
+      sidebarEl.classList.remove("nav-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    };
+    navToggle.addEventListener("click", () => {
+      const isOpen = sidebarEl.classList.toggle("nav-open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+    sidebarEl.querySelectorAll(".nav-link, .subnav a").forEach(link => {
+      link.addEventListener("click", closeNav);
+    });
+    window.addEventListener("scroll", () => {
+      if (sidebarEl.classList.contains("nav-open")) closeNav();
+    }, { passive: true });
+  }
 });
