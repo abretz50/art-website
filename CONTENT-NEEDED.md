@@ -3,6 +3,17 @@
 Placeholder/mockup copy has been removed from the live pages. This tracks what's
 still needed from Art to finish out each section for real.
 
+## 8/27/26 redesign pass
+
+Converted the site to a dark brown/near-black theme (matching the welcome video's
+palette) with light-brown/cream text, added hero background photos to most inner
+pages, removed the repeated "Composer Website" eyebrow and the "Browse the Music" /
+"Contact" hero buttons from every inner page (Contact now lives in the shared
+footer instead), and rewrote copy on the Press Kit, Contact, Poetry (all 3 pages),
+Vocal Demos, Artist CV, and Biography pages per direct feedback. Poetry's "Intro to
+My Poetry" page is now "My Poetry" — an overview hub linking into Poetry Demos and
+Little Book of Spells, which remain their own pages in the nav.
+
 ## Received
 
 - [x] Welcome/preshow video (`assets/video/welcome.mp4`, ~37s, with poster
@@ -199,10 +210,15 @@ concert video is for (it's too large to be a website asset as-is).
 
 ## Contact Form
 
-- [ ] What email address should contact form submissions go to?
-- [ ] Any preference on how it's wired up (a form service like Formspree/Netlify Forms,
-      vs. a plain `mailto:` link)? The form UI is in place but not yet connected — see the
-      TODO comment in `contact/index.html`.
+- [x] Wired to `arttapiaminchez.composer@gmail.com`. On submit, JS in
+      `scripts/includes.js` builds a `mailto:` link from the form fields (name,
+      email, inquiry type, subject, message) and opens it — this requires the
+      visitor to have a mail client configured, which is the standard limitation
+      of a `mailto:`-based form on a static site with no backend. If real inbox-style
+      submissions (no mail client popup) are wanted instead, Art would need to sign
+      up for a free form service himself (e.g. Formspree or Netlify Forms — account
+      creation isn't something that can be done on his behalf) and send over the
+      resulting form endpoint URL to swap in.
 
 ## General
 

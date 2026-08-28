@@ -54,4 +54,20 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (sidebarEl.classList.contains("nav-open")) closeNav();
     }, { passive: true });
   }
+
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(contactForm);
+      const name = data.get("name") || "";
+      const email = data.get("email") || "";
+      const inquiryType = data.get("inquiryType") || "General";
+      const subject = data.get("subject") || "";
+      const message = data.get("message") || "";
+      const mailSubject = `[${inquiryType}] ${subject || "Website inquiry"}`;
+      const mailBody = `${message}\n\n---\nFrom: ${name} <${email}>`;
+      window.location.href = `mailto:arttapiaminchez.composer@gmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+    });
+  }
 });
