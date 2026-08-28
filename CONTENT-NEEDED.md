@@ -3,6 +3,16 @@
 Placeholder/mockup copy has been removed from the live pages. This tracks what's
 still needed from Art to finish out each section for real.
 
+## 8/27/26 homepage pass
+
+- [ ] The YouTube, Instagram, MusicSpoke, LinkedIn, and Facebook icons on the
+      homepage are hand-drawn generic glyphs (play button, camera, music note, "in"
+      badge, "f" circle) built in plain SVG — not the official brand logos, since
+      those aren't on hand. If official logo files are ever provided, they're a
+      straightforward swap in `index.html`'s "Important Links" section.
+- [x] Clean URLs fixed sitewide — the Home link no longer resolves to
+      `.../index.html`; it now points at the folder root everywhere.
+
 ## 8/27/26 redesign pass
 
 Converted the site to a dark brown/near-black theme (matching the welcome video's
