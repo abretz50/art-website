@@ -3,6 +3,19 @@
 Placeholder/mockup copy has been removed from the live pages. This tracks what's
 still needed from Art to finish out each section for real.
 
+## 8/27/26 catalog restructure
+
+- [x] Merged `catalog/choral/`, `catalog/instrumental/`, and `catalog/full-works-list/`
+      into `catalog/index.html` as anchor sections (`#choral`, `#instrumental`) per
+      feedback — one scrollable page instead of separate pages to click into. The
+      "Full Works List" concept was dropped entirely (no longer in the nav). The
+      three old page files were deleted since nothing else linked to them.
+- [ ] The "Featured work presentation" card now has a photo (a composing shot)
+      since there's no real recording of *Disquieted Prayers* yet to embed. Once
+      one exists, swap the `<img class="card-photo">` for a `<video>`/YouTube embed.
+- [ ] "Upcoming Performances" card is new — currently just says "No current
+      upcoming performances." Update with real dates when there's something to list.
+
 ## 8/27/26 biography pass
 
 - [x] Per feedback, "At a Glance" now only links to pages that actually exist on
