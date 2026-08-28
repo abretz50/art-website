@@ -445,6 +445,28 @@ body::after{
 @media (max-width: 600px){
   .portrait{float:none; margin:0 0 16px; max-width:100%;}
 }
+.portrait-vertical{
+  width:100%;
+  max-width:220px;
+  aspect-ratio:2/3;
+  object-fit:cover;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:var(--shadow);
+  float:right;
+  margin:0 0 16px 20px;
+}
+@media (max-width: 600px){
+  .portrait-vertical{float:none; margin:0 0 16px; max-width:100%;}
+}
+.card-photo-bottom{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:16px;
+  margin-top:18px;
+  display:block;
+}
 .photo-gallery{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
