@@ -15,7 +15,7 @@
   <div id="intro-overlay" class="intro-overlay">
     <video id="intro-video" class="intro-video" data-src="./assets/video/welcome.mp4" poster="./assets/video/welcome-cover.jpg" preload="none" playsinline></video>
     <button id="intro-skip" class="intro-skip" type="button">Skip Intro</button>
-    <button id="intro-unmute" class="intro-unmute" type="button" hidden>Tap for Sound</button>
+    <button id="intro-sound" class="intro-unmute" type="button">Tap to Mute</button>
   </div>
   <div class="layout">
     <div id="site-sidebar" class="sidebar-shell"></div>
@@ -64,9 +64,9 @@ Tapia-Minchez</h1>
         <p class="kicker">Artist Statement</p>
         <h2 class="section-title">Spiritually Fueled Creativity</h2>
       </div>
+      <img class="card-photo" src="./assets/photos/poa-banner.jpg" alt="Peace of Art — Spiritually Fueled Creativity" />
       <p class="muted">I'm a Composer, Vocalist, Poet, and Spiritual Seeker, sharing positive energy through everything I create. Peace friends!</p>
       <p class="muted">I continue to share my voice both vocally and compositionally, and I aspire to start my own chamber ensemble dedicated to Jewish vocal music.</p>
-      <img class="card-photo-bottom" src="./assets/photos/poa-banner.jpg" alt="Peace of Art — Spiritually Fueled Creativity" />
     </article>
   </div>
 </section>
@@ -76,7 +76,7 @@ Tapia-Minchez</h1>
     <h2 class="section-title">Composer, vocalist, poet</h2>
   </div>
   <div class="frame-grid">
-    <div class="photo-frame has-photo"><img src="./assets/photos/piano-composing-color.jpg" alt="Art performing at the piano" loading="lazy"><span>Composing</span></div>
+    <div class="photo-frame has-photo"><img src="./assets/photos/piano-bw-lowangle.jpg" alt="Art performing at the piano" loading="lazy"><span>Composing</span></div>
     <div class="photo-frame has-photo"><img src="./assets/photos/opera-3.jpg" alt="Art singing in an opera production" loading="lazy" style="object-position:68% 14%"><span>Singing</span></div>
     <div class="photo-frame has-photo"><img src="./assets/photos/poet-journal-writing.jpg" alt="Art writing in a journal outdoors" loading="lazy"><span>Poet</span></div>
   </div>
@@ -152,7 +152,7 @@ Tapia-Minchez</h1>
 
       const video = document.getElementById("intro-video");
       const skipBtn = document.getElementById("intro-skip");
-      const unmuteBtn = document.getElementById("intro-unmute");
+      const soundBtn = document.getElementById("intro-sound");
 
       function dismiss() {
         sessionStorage.setItem("introPlayed", "1");
@@ -161,20 +161,25 @@ Tapia-Minchez</h1>
         setTimeout(() => overlay.remove(), 550);
       }
 
+      function updateSoundLabel() {
+        soundBtn.textContent = video.muted ? "Tap for Sound" : "Tap to Mute";
+      }
+
       skipBtn.addEventListener("click", dismiss);
       video.addEventListener("ended", dismiss);
 
+      soundBtn.addEventListener("click", () => {
+        video.muted = !video.muted;
+        updateSoundLabel();
+        if (!video.muted) video.play().catch(() => {});
+      });
+
       video.src = video.dataset.src;
       video.muted = false;
-      video.play().catch(() => {
+      video.play().then(updateSoundLabel).catch(() => {
         video.muted = true;
+        updateSoundLabel();
         video.play().catch(() => {});
-        unmuteBtn.hidden = false;
-        unmuteBtn.addEventListener("click", () => {
-          video.muted = false;
-          video.play();
-          unmuteBtn.hidden = true;
-        }, { once: true });
       });
     })();
   </script>

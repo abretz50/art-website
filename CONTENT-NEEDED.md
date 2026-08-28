@@ -5,13 +5,14 @@ still needed from Art to finish out each section for real.
 
 ## 8/27/26 biography pass
 
-- [ ] The Biography page's "At a Glance" list now links out to Rowan University
-      (`rowan.edu`, confirmed) and would ideally also link "Philadelphia Symphonic
-      Chorus" somewhere — couldn't confirm a real URL for an organization by that
-      exact name (found several similarly-named Philly-area choirs — Philadelphia
-      Symphonic Choir, The Philadelphia Chorale, The Philadelphia Chorus — but
-      didn't want to guess and risk linking to the wrong group). It's left as
-      plain text for now; send the real URL and it's a one-line swap.
+- [x] Per feedback, "At a Glance" now only links to pages that actually exist on
+      this site — My Music, My Poetry, My Vocals, and Promotional Materials (the
+      Press Kit). The Rowan University and Philadelphia Symphonic Chorus links
+      were removed since neither is a page on this site.
+- Reference: Art confirmed the Philadelphia ensemble's Instagram is
+  `instagram.com/philadelphiasymphonicchoir` (note: "Choir," not "Chorus" as
+  written in the bio text) — not currently used anywhere, but here if a social
+  link for it is ever wanted (e.g. added to the homepage's "Learn More" chips).
 
 ## 8/27/26 homepage pass
 

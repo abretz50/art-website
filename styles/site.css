@@ -459,12 +459,12 @@ body::after{
 @media (max-width: 600px){
   .portrait-vertical{float:none; margin:0 0 16px; max-width:100%;}
 }
-.card-photo-bottom{
+.card-photo{
   width:100%;
   aspect-ratio:16/9;
   object-fit:cover;
   border-radius:16px;
-  margin-top:18px;
+  margin-bottom:16px;
   display:block;
 }
 .photo-gallery{
