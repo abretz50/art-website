@@ -3,6 +3,32 @@
 Placeholder/mockup copy has been removed from the live pages. This tracks what's
 still needed from Art to finish out each section for real.
 
+## 8/28/26 — found and fixed a real photo mislabel
+
+Two files from the original 8/11/26 shoot were swapped during cataloging:
+what was named `reading-bench-2.jpg` actually showed Art at a piano, and
+`piano-practice-portrait-3.jpg` actually showed him reading outdoors. Renamed
+the files on disk to swap them back — no page edits were needed since both
+pages referencing them (Press Kit, My Poetry) now automatically show the
+correct photo under the same filename.
+
+## 8/28/26 catalog — Featured Works photo needs a real link eventually
+
+- [x] Added the Rowan University Choir premiere photo (provided) to both the
+      homepage-style "Featured Works" card and the Choral Catalog's Disquieted
+      Prayers entry, plus a "Testimonies" card quoting The Whit's coverage of
+      the premiere (with a link to the full article) in place of the old
+      "Browse the Catalog" card, which was removed per feedback.
+- [ ] The Featured Works photo isn't a link yet — once there's a specific
+      YouTube video for *Disquieted Prayers*, wrap the `<img class="card-photo">`
+      in `catalog/index.html` in an `<a>` to it.
+- [x] Birkat Shalom and Cuando El Rey Nimrod now show the two concept sketches
+      provided (`sketch-birkat-shalom.png`, `sketch-cuando-el-rey-nimrod.png`)
+      in place of their embedded videos, "for now" per feedback. The actual
+      recordings are untouched at `assets/video/birkat-shalom-kcvitas-2026.mp4`
+      and `assets/video/cuando-el-rey-nimrod-kcvitas-2026.mp4` — swapping back
+      to `<video>` tags later is a quick revert (see git history on this file).
+
 ## 8/27/26 catalog scroll-spy — needs a real-browser check
 
 Added an `IntersectionObserver` in `scripts/includes.js` so the sidebar's Choral/
