@@ -1,7 +1,12 @@
 
-if (window.history && window.history.replaceState && /\/index\.html$/.test(location.pathname)) {
-  const cleanPath = location.pathname.replace(/index\.html$/, "");
-  history.replaceState(null, "", cleanPath + location.search + location.hash);
+if (window.history && window.history.replaceState) {
+  let cleanPath = location.pathname.replace(/index\.html$/, "");
+  if (cleanPath.length > 1 && cleanPath.endsWith("/")) {
+    cleanPath = cleanPath.slice(0, -1);
+  }
+  if (cleanPath !== location.pathname) {
+    history.replaceState(null, "", cleanPath + location.search + location.hash);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
