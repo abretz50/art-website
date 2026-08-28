@@ -310,6 +310,18 @@ body::after{
 .section{
   margin-top:26px;
 }
+.catalog-anchor{
+  margin-top:56px;
+  padding-top:32px;
+  border-top:1px solid var(--surface-border);
+  scroll-margin-top:24px;
+}
+.catalog-anchor .kicker{
+  transition:color .3s ease;
+}
+.catalog-anchor.in-view .kicker{
+  color:var(--fg-strong);
+}
 .section-head{
   margin-bottom:14px;
 }

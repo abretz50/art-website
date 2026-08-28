@@ -65,6 +65,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     }, { passive: true });
   }
 
+  const choralSection = document.getElementById("choral");
+  const instrumentalSection = document.getElementById("instrumental");
+  if (choralSection && instrumentalSection && "IntersectionObserver" in window) {
+    const sectionMap = [
+      { el: choralSection, href: "#choral" },
+      { el: instrumentalSection, href: "#instrumental" }
+    ];
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const match = sectionMap.find((s) => s.el === entry.target);
+        if (!match) return;
+        const navLink = document.querySelector(`.subnav a[href$="${match.href}"]`);
+        entry.target.classList.toggle("in-view", entry.isIntersecting);
+        if (navLink) navLink.classList.toggle("active", entry.isIntersecting);
+      });
+    }, { rootMargin: "-35% 0px -55% 0px", threshold: 0 });
+    sectionMap.forEach((s) => observer.observe(s.el));
+  }
+
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {

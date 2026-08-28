@@ -3,6 +3,17 @@
 Placeholder/mockup copy has been removed from the live pages. This tracks what's
 still needed from Art to finish out each section for real.
 
+## 8/27/26 catalog scroll-spy — needs a real-browser check
+
+Added an `IntersectionObserver` in `scripts/includes.js` so the sidebar's Choral/
+Instrumental links highlight as you scroll past those sections on the catalog
+page (and a matching `.in-view` class brightens each section's kicker). The
+selectors and logic check out, and everything else on the page was verified
+working, but the observer's live firing couldn't be confirmed through the
+in-session preview tooling — it appears to need real paint/compositing cycles
+that this particular preview pane doesn't reliably run. Worth a quick look on
+the actual deployed page to confirm the highlight-on-scroll works as intended.
+
 ## 8/27/26 catalog restructure
 
 - [x] Merged `catalog/choral/`, `catalog/instrumental/`, and `catalog/full-works-list/`
