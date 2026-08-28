@@ -548,7 +548,10 @@ body::after{
   background:var(--surface-strong);
   border:1px solid var(--surface-border);
   color:var(--fg);
+  text-decoration:none;
+  transition:.2s ease;
 }
+a.list-item:hover{background:rgba(255,255,255,.1); color:var(--gold)}
 .work-card{
   display:grid; gap:14px;
 }
