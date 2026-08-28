@@ -548,6 +548,20 @@ body::after{
 }
 .social-icon svg{width:17px; height:17px}
 .button svg{width:16px; height:16px; margin-right:2px}
+.chip-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+.chip{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:7px 14px;
+  border-radius:999px;
+  border:1px solid var(--surface-border);
+  background:rgba(255,255,255,.05);
+  color:var(--fg-strong);
+  text-decoration:none;
+  font-size:.85rem;
+  transition:.2s ease;
+}
+.chip:hover{background:rgba(255,255,255,.12); color:var(--gold)}
+.chip svg{width:14px; height:14px}
 .meta{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(160px,1fr));

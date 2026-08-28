@@ -11,7 +11,11 @@ still needed from Art to finish out each section for real.
       those aren't on hand. If official logo files are ever provided, they're a
       straightforward swap in `index.html`'s "Important Links" section.
 - [x] Clean URLs fixed sitewide — the Home link no longer resolves to
-      `.../index.html`; it now points at the folder root everywhere.
+      `.../index.html`; it now points at the folder root everywhere. Also added a
+      small script (`scripts/includes.js`) that rewrites the visible URL if a page
+      is ever reached directly via a `/index.html` link (bookmark, typed URL,
+      shared link) — it still loads that file, but the address bar cleans up to
+      the folder path right after.
 
 ## 8/27/26 redesign pass
 

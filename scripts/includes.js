@@ -1,4 +1,9 @@
 
+if (window.history && window.history.replaceState && /\/index\.html$/.test(location.pathname)) {
+  const cleanPath = location.pathname.replace(/index\.html$/, "");
+  history.replaceState(null, "", cleanPath + location.search + location.hash);
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   const depth = document.body.dataset.depth || ".";
   const mount = async (selector, file) => {
